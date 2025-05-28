@@ -1,0 +1,179 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2},\"customTheme\":{\"name\":\"Innovate\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "carro-deportivo1992731118043074.png",
+            "path": "carro-deportivo1992731118043074.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          },
+          {
+            "name": "Innovate",
+            "path": "BuiltInThemes/Innovate.json",
+            "type": 201
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "2a221b6d9ace0be2bbd9",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"20aed7281dff88246ff5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":201.9512195121951,\"y\":0,\"z\":13,\"width\":127.3170731707317,\"height\":111.21951219512195,\"tabOrder\":13}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"carro-deportivo1992731118043074.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 111.22,
+          "width": 127.32,
+          "x": 201.95,
+          "y": 0.00,
+          "z": 13.00
+        },
+        {
+          "config": "{\"name\":\"31a2c25fb0ffefbbd451\",\"layouts\":[{\"id\":0,\"position\":{\"x\":718.3673469387755,\"y\":178.50340136054422,\"z\":8,\"width\":343.94557823129253,\"height\":180.68027210884355,\"tabOrder\":8}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_vehiculo.modelo_vehiculo\"},{\"queryRef\":\"Dim_Calendario.TotalVehiculosVendidos\"},{\"queryRef\":\"Fotos_Vehiculos.Version\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d1\",\"Entity\":\"Dim_Calendario\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_vehiculo\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Fotos_Vehiculos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"modelo_vehiculo\"},\"Name\":\"dim_vehiculo.modelo_vehiculo\",\"NativeReferenceName\":\"modelo_vehiculo\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"TotalVehiculosVendidos\"},\"Name\":\"Dim_Calendario.TotalVehiculosVendidos\",\"NativeReferenceName\":\"TotalVehiculosVendidos\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Version\"},\"Name\":\"Fotos_Vehiculos.Version\",\"NativeReferenceName\":\"Version\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"TotalVehiculosVendidos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 180.68,
+          "width": 343.95,
+          "x": 718.37,
+          "y": 178.50,
+          "z": 8.00
+        },
+        {
+          "config": "{\"name\":\"43cea239a6307284e527\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":280,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 280.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"4b42eadd12b80c8a1a51\",\"layouts\":[{\"id\":0,\"position\":{\"x\":612.263242375602,\"y\":55.47351524879615,\"z\":5,\"width\":279.42215088282506,\"height\":106.8378812199037,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Calendario.TotalVendedores\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_Calendario\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotalVendedores\"},\"Name\":\"Dim_Calendario.TotalVendedores\",\"NativeReferenceName\":\"TotalVendedores\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotalVendedores\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 106.84,
+          "width": 279.42,
+          "x": 612.26,
+          "y": 55.47,
+          "z": 5.00
+        },
+        {
+          "config": "{\"name\":\"535e821a612276c21eab\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":409.5,\"width\":343,\"height\":181,\"z\":9,\"tabOrder\":9}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Calendario.Mes\",\"active\":true}],\"Y\":[{\"queryRef\":\"Dim_Calendario.TotalVehiculosVendidos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_Calendario\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Mes\"},\"Name\":\"Dim_Calendario.Mes\",\"NativeReferenceName\":\"Mes\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotalVehiculosVendidos\"},\"Name\":\"Dim_Calendario.TotalVehiculosVendidos\",\"NativeReferenceName\":\"TotalVehiculosVendidos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotalVehiculosVendidos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Vehiculos Vendidos por Mes'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 181.00,
+          "width": 343.00,
+          "x": 10.00,
+          "y": 409.50,
+          "z": 9.00
+        },
+        {
+          "config": "{\"name\":\"5367c36a6456cb3ad86a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":926.3414634146342,\"y\":60,\"z\":4,\"width\":321.9512195121951,\"height\":102.4390243902439,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Calendario.PrecioPromedio\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_Calendario\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"PrecioPromedio\"},\"Name\":\"Dim_Calendario.PrecioPromedio\",\"NativeReferenceName\":\"PrecioPromedio\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"PrecioPromedio\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 102.44,
+          "width": 321.95,
+          "x": 926.34,
+          "y": 60.00,
+          "z": 4.00
+        },
+        {
+          "config": "{\"name\":\"70f36aa8fb115c079619\",\"layouts\":[{\"id\":0,\"position\":{\"x\":415.78231292517006,\"y\":178.50340136054422,\"z\":7,\"width\":241.6326530612245,\"height\":180.68027210884355,\"tabOrder\":7}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_vehiculo.modelo_vehiculo\",\"active\":true}],\"Y\":[{\"queryRef\":\"Dim_Calendario.TotalVehiculosVendidos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_vehiculo\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"Dim_Calendario\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"modelo_vehiculo\"},\"Name\":\"dim_vehiculo.modelo_vehiculo\",\"NativeReferenceName\":\"modelo_vehiculo\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"TotalVehiculosVendidos\"},\"Name\":\"Dim_Calendario.TotalVehiculosVendidos\",\"NativeReferenceName\":\"TotalVehiculosVendidos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"TotalVehiculosVendidos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Vehiculos Vendidos por modelo'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 180.68,
+          "width": 241.63,
+          "x": 415.78,
+          "y": 178.50,
+          "z": 7.00
+        },
+        {
+          "config": "{\"name\":\"83bbb200e6db7c2604f5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":236.2760834670947,\"y\":55.47351524879615,\"z\":3,\"width\":357.4959871589085,\"height\":104.78330658105939,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Calendario.TotalIngresos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_Calendario\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotalIngresos\"},\"Name\":\"Dim_Calendario.TotalIngresos\",\"NativeReferenceName\":\"TotalIngresos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotalIngresos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 104.78,
+          "width": 357.50,
+          "x": 236.28,
+          "y": 55.47,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"9fff8ce9c350903b4276\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640,\"y\":409.2517006802721,\"z\":11,\"width\":640,\"height\":180.68027210884355,\"tabOrder\":11}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Vendedor.Vendedor\"},{\"queryRef\":\"Dim_Calendario.VehiculosVendidosPorVendedor\"},{\"queryRef\":\"Dim_Calendario.IngresosPorVendedor\"},{\"queryRef\":\"Dim_Calendario.PrecioPromedio\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_Vendedor\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"Dim_Calendario\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Vendedor\"},\"Name\":\"Dim_Vendedor.Vendedor\",\"NativeReferenceName\":\"Vendedor\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"VehiculosVendidosPorVendedor\"},\"Name\":\"Dim_Calendario.VehiculosVendidosPorVendedor\",\"NativeReferenceName\":\"VehiculosVendidosPorVendedor\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"IngresosPorVendedor\"},\"Name\":\"Dim_Calendario.IngresosPorVendedor\",\"NativeReferenceName\":\"IngresosPorVendedor\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"PrecioPromedio\"},\"Name\":\"Dim_Calendario.PrecioPromedio\",\"NativeReferenceName\":\"PrecioPromedio\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 180.68,
+          "width": 640.00,
+          "x": 640.00,
+          "y": 409.25,
+          "z": 11.00
+        },
+        {
+          "config": "{\"name\":\"b19879baa560b0c5a560\",\"layouts\":[{\"id\":0,\"position\":{\"x\":948.2926829268292,\"y\":0,\"z\":12,\"width\":127.3170731707317,\"height\":111.21951219512195,\"tabOrder\":12}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"carro-deportivo1992731118043074.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 111.22,
+          "width": 127.32,
+          "x": 948.29,
+          "y": 0.00,
+          "z": 12.00
+        },
+        {
+          "config": "{\"name\":\"b3bb058edbb4c339fda0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":353,\"y\":410,\"width\":240,\"height\":181,\"z\":10,\"tabOrder\":10}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"dim_canal.tipo_canal\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_canal\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"tipo_canal\"},\"Name\":\"dim_canal.tipo_canal\",\"NativeReferenceName\":\"tipo_canal\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Canales de Venta'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 181.00,
+          "width": 240.00,
+          "x": 353.00,
+          "y": 410.00,
+          "z": 10.00
+        },
+        {
+          "config": "{\"name\":\"b7fd05533508a4108be6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":352.6829268292683,\"y\":13.170731707317072,\"z\":1,\"width\":607.3170731707316,\"height\":68.78048780487805,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"DASHBOARD VENTA DE VEHICULOS\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"24pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 68.78,
+          "width": 607.32,
+          "x": 352.68,
+          "y": 13.17,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"ba6ebf9e240665720b37\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.272873194221509,\"y\":178.74799357945426,\"z\":6,\"width\":343.11396468699843,\"height\":180.80256821829857,\"tabOrder\":6}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Dim_Calendario.TotalVehiculosVendidos\"}],\"Category\":[{\"queryRef\":\"dim_canal.tipo_canal\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_Calendario\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_canal\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotalVehiculosVendidos\"},\"Name\":\"Dim_Calendario.TotalVehiculosVendidos\",\"NativeReferenceName\":\"TotalVehiculosVendidos\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"tipo_canal\"},\"Name\":\"dim_canal.tipo_canal\",\"NativeReferenceName\":\"tipo_canal\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotalVehiculosVendidos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Vehiculos Vendidos por Canales de Venta'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 180.80,
+          "width": 343.11,
+          "x": 10.27,
+          "y": 178.75,
+          "z": 6.00
+        },
+        {
+          "config": "{\"name\":\"fc53479fd249ba084ab4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":47.255216693418944,\"z\":2,\"width\":279.42215088282506,\"height\":113.00160513643661,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Calendario.TotalVehiculosVendidos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_Calendario\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotalVehiculosVendidos\"},\"Name\":\"Dim_Calendario.TotalVehiculosVendidos\",\"NativeReferenceName\":\"TotalVehiculosVendidos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotalVehiculosVendidos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 113.00,
+          "width": 279.42,
+          "x": 0.00,
+          "y": 47.26,
+          "z": 2.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Innovate"
+}

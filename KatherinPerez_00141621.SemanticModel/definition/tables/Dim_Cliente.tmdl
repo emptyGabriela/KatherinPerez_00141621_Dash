@@ -1,0 +1,30 @@
+table Dim_Cliente
+	lineageTag: 0eb67501-5616-43ff-b670-47a3dfec2a60
+
+	column id_Cliente
+		dataType: string
+		lineageTag: d8b4fb6b-f3c8-44f7-b62c-7fc6ce55068b
+		summarizeBy: none
+		sourceColumn: id_Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		dataType: string
+		lineageTag: 2ca2e8b8-f2e7-4fd6-8944-4c4c647a12b9
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Cliente = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\soytu\Downloads\VentasVehiculos.xlsx"), null, true),
+				    Dim_Cliente_Table = Origen{[Item="Dim_Cliente",Kind="Table"]}[Data]
+				in
+				    Dim_Cliente_Table
+
+	annotation PBI_ResultType = Table
+

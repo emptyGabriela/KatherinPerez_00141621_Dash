@@ -1,0 +1,118 @@
+table Dim_Calendario
+	lineageTag: 70a68aff-cfd3-4183-a859-502705e94ce5
+
+	measure TotalVehiculosVendidos = ```
+			COUNTROWS(Fact_Ventas)
+			
+			
+			```
+		formatString: 0
+		lineageTag: 68f5a520-c17f-46e5-8093-44ed87efb3e0
+
+	measure TotalIngresos = SUM(Fact_Ventas[Precio Venta sin IGV])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 6d3b7546-8d07-4d4b-a7df-fa90f52f7138
+
+	measure PrecioPromedio = ```
+			
+			AVERAGE(Fact_Ventas[Precio Venta sin IGV])
+			
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 38ff3f13-9e96-4ba2-8a3e-13b49358556a
+
+	measure TotalVendedores =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Dim_Vendedor[ID_Vendedor]),
+			    REMOVEFILTERS(Dim_Vendedor)
+			)
+		formatString: 0
+		lineageTag: 4e18deed-67a0-4c7c-bbe2-a41450d6930c
+
+	measure VehiculosVendidosPorVendedor = COUNTROWS(Fact_Ventas)
+		formatString: 0
+		lineageTag: 754c2cb3-b964-4dfa-a970-411853a46401
+
+	measure IngresosPorVendedor = SUM(Fact_Ventas[Precio Venta sin IGV])
+		lineageTag: 61755fff-e264-4770-92ed-0c3aa21a9393
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PrecioPromedioPorVendedor = AVERAGE(Fact_Ventas[Precio Venta sin IGV])
+		lineageTag: b6ed8be9-5df0-4c22-8cc6-72d3380ac53c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ea2327a6-a21b-4c2d-a05c-d94f8efd33dc
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		variation Variación
+			isDefault
+			relationship: b702e9e5-6b49-4b99-a43c-c848a2f77f27
+			defaultHierarchy: LocalDateTable_284c4b07-8901-45b4-936a-49b5564d2ef1.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Año
+		dataType: int64
+		formatString: 0
+		lineageTag: 51daa309-a3cb-462b-a3a8-cdda2f5e7b2f
+		summarizeBy: sum
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semana
+		dataType: int64
+		formatString: 0
+		lineageTag: 5958a69b-1c30-486b-8dd0-14e8a6be4349
+		summarizeBy: sum
+		sourceColumn: Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: 1bb0e510-dd55-4ba7-a45c-9aca6ee9e29e
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero Mes'
+		dataType: int64
+		formatString: 0
+		lineageTag: 12f9b0e7-3e1a-46e5-92bd-fbcead5c1d2d
+		summarizeBy: sum
+		sourceColumn: Numero Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column datekey
+		dataType: int64
+		formatString: 0
+		lineageTag: e0b79148-df13-4da7-80fb-2df3a298ad8c
+		summarizeBy: none
+		sourceColumn: datekey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Calendario = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\soytu\Downloads\VentasVehiculos.xlsx"), null, true),
+				    Dim_Calendario_Table = Origen{[Item="Dim_Calendario",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Dim_Calendario_Table,{{"Fecha", type date}, {"Año", Int64.Type}, {"Semana", Int64.Type}, {"Mes", type text}, {"Numero Mes", Int64.Type}, {"datekey", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+
